@@ -20,6 +20,7 @@ async function switchData(data) {
     image.style = `background-image: url(${data.slides[0].image.desktop})`;
     title.innerText = `${data.slides[0].title}`;
     description.innerText = `${data.slides[0].description}`;
+
     prev.addEventListener('click', () => {
         index--;
          if (index < 0) {

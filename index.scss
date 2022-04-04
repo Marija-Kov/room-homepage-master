@@ -18,6 +18,7 @@
     margin: 0;
     padding: 0;
     font-family: spartan-regular;
+    
 }
 
 //HEADER//
@@ -166,7 +167,6 @@ h3 {
 .attribution {   
     color:rgb(102, 102, 102);
     width: fit-content;
-    //margin: 0 auto;
     font-size: 0.05em; 
     bottom: -310em;
     position: relative; }
@@ -236,8 +236,6 @@ h3 {
 
 @media (min-width: 950px) {
 
-    //SECTION.TOP//
-
      .btn-group {
         top: 22.5em
     }
@@ -267,16 +265,22 @@ h3 {
     .info {
         padding-left: 5em;
         padding-top: 6em;
+        height: 32em;
+    }
+    .description {
+        height: 12.78em;
+        min-width: 27em;
     }
     button.shop {
         margin-top: 0;
-        top: -4em;
+        margin-bottom: em;
+        top: -8em;
+        
     }
     .btn-group {
         position:relative;
         left: -5em;
-        top: 6.9em;
-        width: 8.17em;
+        top: 5.6em;
     }
 
         //FOOTER//
@@ -304,7 +308,7 @@ h3 {
 
 @media (min-width: 1250px) {
      .btn-group {
-        top: 8.15em;
+        top: 5.6em;
     }
 }
 
@@ -329,15 +333,7 @@ h3 {
 @media (min-width: 1487px) {
   .btn-group {
          width: 9.2em;
-         top: 42%;
-     }
-
-}
-
-@media (min-width: 1585px) {
-  .btn-group {
-         width: 9.2em;
-         top: 47.5%;
+         bottom: 0;
      }
 
 }

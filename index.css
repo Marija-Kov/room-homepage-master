@@ -265,16 +265,21 @@ h3 {
   .info {
     padding-left: 5em;
     padding-top: 6em;
+    height: 32em;
+  }
+  .description {
+    height: 12.78em;
+    min-width: 27em;
   }
   button.shop {
     margin-top: 0;
-    top: -4em;
+    margin-bottom: em;
+    top: -8em;
   }
   .btn-group {
     position: relative;
     left: -5em;
-    top: 6.9em;
-    width: 8.17em;
+    top: 5.6em;
   }
   footer {
     display: -webkit-box;
@@ -301,7 +306,7 @@ h3 {
 
 @media (min-width: 1250px) {
   .btn-group {
-    top: 8.15em;
+    top: 5.6em;
   }
 }
 
@@ -324,14 +329,7 @@ h3 {
 @media (min-width: 1487px) {
   .btn-group {
     width: 9.2em;
-    top: 42%;
-  }
-}
-
-@media (min-width: 1585px) {
-  .btn-group {
-    width: 9.2em;
-    top: 47.5%;
+    bottom: 0;
   }
 }
 /*# sourceMappingURL=index.css.map */
