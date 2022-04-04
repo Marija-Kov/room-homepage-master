@@ -8,6 +8,8 @@ fetch('data.json')
        }
      })
      .then(data => switchData(data))
+     .then(initFadeIn)
+     .then(autoSlide)
      .catch(err => console.log(`Error: ${err}`))
 
 async function switchData(data) {
@@ -17,6 +19,7 @@ async function switchData(data) {
     let index = 0;
     let prev = document.querySelector('.prev');
     let next = document.querySelector('.next');
+
     image.style = `background-image: url(${data.slides[0].image.desktop})`;
     title.innerText = `${data.slides[0].title}`;
     description.innerText = `${data.slides[0].description}`;
@@ -28,8 +31,7 @@ async function switchData(data) {
          }
          image.style = `background-image: url(${data.slides[index].image.desktop})`;
          title.innerText = `${data.slides[index].title}`;
-         description.innerText = `${data.slides[index].description}`;
-        console.log(index);   
+         description.innerText = `${data.slides[index].description}`; 
     })
 
     next.addEventListener("click", () => {
@@ -40,12 +42,30 @@ async function switchData(data) {
        image.style = `background-image: url(${data.slides[index].image.desktop})`;
        title.innerText = `${data.slides[index].title}`;
        description.innerText = `${data.slides[index].description}`;
-
-      console.log(index);  
     });
-
-    console.log(index);
 
 }
 
+async function initFadeIn() {
+  document.querySelectorAll("button.slide").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      let fadingEls = document.querySelectorAll(".fade");
+      fadingEls.forEach(fadingEl => {
+          if (fadingEl.classList.contains("fadeEm")) {
+            fadingEl.classList.remove("fadeEm");
+          } else if (!fadingEl.classList.contains("fadeEm")) {
+            fadingEl.classList.add("fadeEm");
+          } 
 
+      });
+    });
+  });
+
+}
+
+async function autoSlide() {
+    setInterval(()=>{
+        document.querySelector('.next').click()
+    }, 5000)
+    
+}

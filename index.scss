@@ -48,6 +48,7 @@ li > a {
         border-bottom: solid rgba(255, 255, 255, 0) 3px;
         position: relative;
         left: 50%;
+        transition: 0.2s;
         }
      &:hover::before {
         border-bottom: solid white 3px;
@@ -173,11 +174,38 @@ h3 {
 .attribution a { 
     color: rgb(77, 77, 77); }
 
+    //EFFECTS//
+
+.fade {
+  animation: fadeIn 2s;
+}
+.fadeEm {
+  animation: fadeEm 2s;
+}
+
+@keyframes fadeEm {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 @media (min-width: 376px){
 
     //SECTION.TOP//
     .hero {
-        background-image: url('images/desktop-image-hero-1.jpg');
+        //background-image: url('images/desktop-image-hero-1.jpg');
         background-size: cover;
     }
 }
@@ -219,7 +247,6 @@ h3 {
       }
   .about > p , h3 {
     display: inline-block;
-      //margin-right: 0;
       width: fit-content;
   }
 
@@ -289,6 +316,7 @@ h3 {
    }
    article.about {
      padding: 4% 2% 2% 3%;
+     max-height: 15em;
    }
   .dark { 
       background-position-x: 0;
@@ -303,6 +331,10 @@ h3 {
       width: 43%;
       z-index: 50;
   }
+  .attribution {   
+    color:rgb(158, 158, 158); }
+  .attribution a { 
+    color: rgb(138, 138, 138); }
 
 }
 
@@ -320,7 +352,7 @@ h3 {
          width: 9.2em;
      }
      article.about {
-     padding: 4% 3% 2% 5%;
+     padding: 4% 3% 0.7% 5%;
      max-width: 627.52px;
    }
    .dark { 
