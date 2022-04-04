@@ -290,8 +290,8 @@ h3 {
   .light {
     background-position-x: 0;
     background-position: right;
-    background-color: rgba(163, 106, 106, 0.493);
-    width: 38%;
+    background-color: white;
+    width: 43%;
     z-index: 50;
   }
 }
@@ -299,6 +299,36 @@ h3 {
 @media (min-width: 1250px) {
   .btn-group {
     top: 8.15em;
+  }
+}
+
+@media (min-width: 1441px) {
+  .hero {
+    max-width: 868.02px;
+  }
+  .btn-group {
+    width: 9.2em;
+  }
+  article.about {
+    padding: 4% 3% 2% 5%;
+    max-width: 627.52px;
+  }
+  .dark {
+    width: 34.7em;
+  }
+}
+
+@media (min-width: 1487px) {
+  .btn-group {
+    width: 9.2em;
+    top: 42%;
+  }
+}
+
+@media (min-width: 1585px) {
+  .btn-group {
+    width: 9.2em;
+    top: 47.5%;
   }
 }
 /*# sourceMappingURL=index.css.map */
