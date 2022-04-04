@@ -74,7 +74,6 @@ li > a:hover::before {
 .hero {
   display: block;
   height: 22.5em;
-  background-image: url("images/mobile-image-hero-1.jpg");
   background-repeat: no-repeat;
 }
 
@@ -177,13 +176,17 @@ h3 {
 }
 
 .attribution {
-  font-size: 11px;
-  text-align: center;
+  color: #666666;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 0.05em;
+  bottom: -310em;
   position: relative;
 }
 
 .attribution a {
-  color: #3e52a3;
+  color: #4d4d4d;
 }
 
 @media (min-width: 376px) {

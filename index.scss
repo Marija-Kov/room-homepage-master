@@ -71,7 +71,6 @@ li > a {
 .hero {
     display: block;
     height: 22.5em;
-    background-image: url('images/mobile-image-hero-1.jpg');
     background-repeat: no-repeat;
 }
 h1 {
@@ -164,8 +163,15 @@ h3 {
     padding: 0 0 0.8em 0;
 }
 
-.attribution { font-size: 11px; text-align: center; position: relative; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution {   
+    color:rgb(102, 102, 102);
+    width: fit-content;
+    //margin: 0 auto;
+    font-size: 0.05em; 
+    bottom: -310em;
+    position: relative; }
+.attribution a { 
+    color: rgb(77, 77, 77); }
 
 @media (min-width: 376px){
 
