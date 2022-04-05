@@ -57,12 +57,51 @@ li > a {
 
 
 .ham,
-.logo {
-    z-index: 99;
+.logo,
+.close {
     position: absolute;
     top: 2.5em;
     left: 1.5em;
 }
+.ham,
+.close {
+    cursor: pointer;
+    z-index: 99;
+}
+
+.hamNavMenu {
+    position: absolute;
+    top:0;
+    z-index: 88;
+    display: block;
+    height: 13vh;
+    width: 100vw;
+    background: white;
+    overflow-x: hidden;
+    box-shadow: 
+                0px 9vh rgba(0,0,0,0.5),
+                0px 22vh rgba(0,0,0,0.5),
+                0px 35vh rgba(0,0,0,0.5),
+                0px 48vh rgba(0,0,0,0.5),
+                0px 61vh rgba(0,0,0,0.5),
+                0px 74vh rgba(0,0,0,0.5),
+                0px 87vh rgba(0,0,0,0.5);
+    
+}
+.hamNavMenu > ul > li > a {
+    color: black;
+    &:hover{
+        color:rgb(140, 140, 140);
+    }
+}
+.hamNavMenu > ul {
+    display: flex;
+    gap: 2%;
+    position:relative;
+    top: 1.3em;
+    left: 5em;
+}
+
 .logo {
     top: 2.7em;
     left: 42%;
@@ -174,13 +213,14 @@ h3 {
 .attribution a { 
     color: rgb(77, 77, 77); }
 
-    //EFFECTS//
+    //**EFFECTS**//
 
-.fade {
-  animation: fadeIn 2s;
+article,
+picture {
+  animation: fadeIn 1s;
 }
 .fadeEm {
-  animation: fadeEm 2s;
+  animation: fadeEm 1s;
 }
 
 @keyframes fadeEm {
@@ -217,7 +257,8 @@ h3 {
     nav {
         display: inline-block;
     }
-    .ham {
+    .ham,
+    .hamNavMenu {
         display: none;
     }
     .logo {

@@ -1,16 +1,17 @@
 
-fetch('data.json')
-     .then(response => {
-       if (!response.ok) {
-         throw new Error(`HTTP error! status: ${response.status}`);
-       } else {
-         return response.json();
-       }
-     })
-     .then(data => switchData(data))
-     .then(initFadeIn)
-     .then(autoSlide)
-     .catch(err => console.log(`Error: ${err}`))
+fetch("data.json")
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    } else {
+      return response.json();
+    }
+  })
+  .then((data) => switchData(data))
+  .then(initFadeIn)
+  .then(autoSlide)
+  .then(dropMenuInit)
+  .catch((err) => console.log(`Error: ${err}`));
 
 async function switchData(data) {
     let image = document.querySelector(".hero");
@@ -44,6 +45,23 @@ async function switchData(data) {
        description.innerText = `${data.slides[index].description}`;
     });
 
+}
+
+async function dropMenuInit() {
+  let menuButton = document.querySelector(".ham");
+  menuButton.addEventListener("click", () => {
+    let hamNavMenu = document.querySelector(".hamNavMenu");
+    hamNavMenu.setAttribute("style", "visibility: visible");
+    menuButton.setAttribute("style", "visibility: hidden");
+  function closeMenuInit() {
+      let closeBtn = document.querySelector(".close");
+      closeBtn.addEventListener("click", () => {
+       hamNavMenu.setAttribute("style", "visibility: hidden");
+       menuButton.setAttribute("style", "visibility: visible");
+   });
+  }
+  closeMenuInit()
+  });
 }
 
 async function initFadeIn() {

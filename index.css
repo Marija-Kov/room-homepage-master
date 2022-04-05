@@ -61,11 +61,48 @@ li > a:hover::before {
 }
 
 .ham,
-.logo {
-  z-index: 99;
+.logo,
+.close {
   position: absolute;
   top: 2.5em;
   left: 1.5em;
+}
+
+.ham,
+.close {
+  cursor: pointer;
+  z-index: 99;
+}
+
+.hamNavMenu {
+  position: absolute;
+  top: 0;
+  z-index: 88;
+  display: block;
+  height: 13vh;
+  width: 100vw;
+  background: white;
+  overflow-x: hidden;
+  -webkit-box-shadow: 0px 9vh rgba(0, 0, 0, 0.5), 0px 22vh rgba(0, 0, 0, 0.5), 0px 35vh rgba(0, 0, 0, 0.5), 0px 48vh rgba(0, 0, 0, 0.5), 0px 61vh rgba(0, 0, 0, 0.5), 0px 74vh rgba(0, 0, 0, 0.5), 0px 87vh rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 9vh rgba(0, 0, 0, 0.5), 0px 22vh rgba(0, 0, 0, 0.5), 0px 35vh rgba(0, 0, 0, 0.5), 0px 48vh rgba(0, 0, 0, 0.5), 0px 61vh rgba(0, 0, 0, 0.5), 0px 74vh rgba(0, 0, 0, 0.5), 0px 87vh rgba(0, 0, 0, 0.5);
+}
+
+.hamNavMenu > ul > li > a {
+  color: black;
+}
+
+.hamNavMenu > ul > li > a:hover {
+  color: #8c8c8c;
+}
+
+.hamNavMenu > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2%;
+  position: relative;
+  top: 1.3em;
+  left: 5em;
 }
 
 .logo {
@@ -191,14 +228,15 @@ h3 {
   color: #4d4d4d;
 }
 
-.fade {
-  -webkit-animation: fadeIn 2s;
-          animation: fadeIn 2s;
+article,
+picture {
+  -webkit-animation: fadeIn 1s;
+          animation: fadeIn 1s;
 }
 
 .fadeEm {
-  -webkit-animation: fadeEm 2s;
-          animation: fadeEm 2s;
+  -webkit-animation: fadeEm 1s;
+          animation: fadeEm 1s;
 }
 
 @-webkit-keyframes fadeEm {
@@ -247,7 +285,8 @@ h3 {
   nav {
     display: inline-block;
   }
-  .ham {
+  .ham,
+  .hamNavMenu {
     display: none;
   }
   .logo {
