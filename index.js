@@ -69,16 +69,13 @@ async function initFadeIn() {
     btn.addEventListener("click", () => {
       let fadingEls = document.querySelectorAll(".fade");
       fadingEls.forEach(fadingEl => {
-          if (fadingEl.classList.contains("fadeEm")) {
-            fadingEl.classList.remove("fadeEm");
-          } else if (!fadingEl.classList.contains("fadeEm")) {
-            fadingEl.classList.add("fadeEm");
-          } 
+          fadingEl.classList.toggle("fadeEm");
+          fadingEl.classList.toggle("fadeEmAgain");
+        
 
       });
     });
-  });
-
+  })
 }
 
 async function autoSlide() {

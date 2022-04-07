@@ -235,26 +235,13 @@ picture {
 }
 
 .fadeEm {
-  -webkit-animation: fadeEm 1s;
-          animation: fadeEm 1s;
+  -webkit-animation: fadeIn 1s;
+          animation: fadeIn 1s;
 }
 
-@-webkit-keyframes fadeEm {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeEm {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+.fadeEmAgain {
+  -webkit-animation: fadeInAgain 1s;
+          animation: fadeInAgain 1s;
 }
 
 @-webkit-keyframes fadeIn {
@@ -267,6 +254,24 @@ picture {
 }
 
 @keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeInAgain {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInAgain {
   from {
     opacity: 0;
   }

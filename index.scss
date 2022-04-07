@@ -219,11 +219,15 @@ article,
 picture {
   animation: fadeIn 1s;
 }
+
 .fadeEm {
-  animation: fadeEm 1s;
+ animation: fadeIn 1s;
+}
+.fadeEmAgain {
+ animation: fadeInAgain 1s;
 }
 
-@keyframes fadeEm {
+@keyframes fadeIn {
   from {
     opacity: 0;
   }
@@ -232,7 +236,7 @@ picture {
   }
 }
 
-@keyframes fadeIn {
+@keyframes fadeInAgain {
   from {
     opacity: 0;
   }
