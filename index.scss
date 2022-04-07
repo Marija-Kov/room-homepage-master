@@ -399,15 +399,16 @@ picture {
 @media (min-width: 1250px) {
      .btn-group {
         top: 5.6em;
+        
     }
 }
 
-@media (min-width: 1441px) {
+@media (min-width: 1400px) {
      #hero {
          max-width: 868.02px;
      }
      .btn-group {
-         width: 9.2em;
+        width: 41%;
      }
      article.about {
      padding: 4% 3% 0.7% 5%;
