@@ -14,14 +14,14 @@ fetch("data.json")
   .catch((err) => console.log(`Error: ${err}`));
 
 async function switchData(data) {
-    let image = document.querySelector(".hero");
+    let image = document.querySelector("#hero");
     let title = document.querySelector("h1");
     let description = document.querySelector("article.info > p");
     let index = 0;
     let prev = document.querySelector('.prev');
     let next = document.querySelector('.next');
 
-    image.style = `background-image: url(${data.slides[0].image.desktop})`;
+   // image.style = `background-image: url(${data.slides[0].image.desktop})`;
     title.innerText = `${data.slides[0].title}`;
     description.innerText = `${data.slides[0].description}`;
 
@@ -30,7 +30,7 @@ async function switchData(data) {
          if (index < 0) {
            index = data.slides.length - 1;
          }
-         image.style = `background-image: url(${data.slides[index].image.desktop})`;
+        // image.style = `background-image: url(${data.slides[index].image.desktop})`;
          title.innerText = `${data.slides[index].title}`;
          description.innerText = `${data.slides[index].description}`; 
     })
@@ -40,7 +40,8 @@ async function switchData(data) {
        if (index > data.slides.length - 1) {
          index = 0;
        }
-       image.style = `background-image: url(${data.slides[index].image.desktop})`;
+      // image.style = `background-image: url(${data.slides[index].image.desktop})`;
+       image.setAttribute("class", `img${index}`);
        title.innerText = `${data.slides[index].title}`;
        description.innerText = `${data.slides[index].description}`;
     });
