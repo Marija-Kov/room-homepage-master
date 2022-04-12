@@ -1,5 +1,8 @@
 # Frontend Mentor - Room homepage solution
 
+#### !!!!: 
+The slide button looks way more misplaced in the FEM screenshot than in live website.. Doesn't look good at all. I wonder if there is a way to see what a screenshot would look like before submitting the solution to FME? And does it indicate some underlying issues with the layout? 
+
 ### Built using:
 
 - semantic HTML
