@@ -29,7 +29,7 @@ Regarding the slide button position in the desktop version, I made a decision to
 
  - This may not be obvious, but I decided I would only use desktop versions of hero images as I didn't see the necessity for using mobile versions in this particular case.
 
-##### _**Previous fade-in effect issues**_
+#### **Previous fade-in effect issues**
 
 Before coming to the final solution, I tried making the hero images switch by fetching them using the JSON file that I made (I left all the code commented out in index.js) - which worked in itself, but I got this strange side-effect after implementing the fade-in animation where my logo and navbar would disappear in the beginning and reappear at the end of each animation interval despite not adding any animation specifically to those elements. This was the case in all viewport sizes. Interestingly, this wasn't the case with the hamburger menu icon.
 
