@@ -25,7 +25,7 @@ Regarding the slide button position in the desktop version, I made a decision to
 
  - Added grey backgrounds to the sides of the footer images instead of just scaling them up with the increasing viewport width.
 
- - Deliberately dropped the slide button into the article.info area at a point between 950px - 1024px viewport width as I thought it balanced well with the dark footer image diagonally from it plus there was enough space away from the text.
+ - Deliberately dropped the slide button into the article area at a point between 950px - 1024px viewport width as I thought it balanced well with the dark footer image diagonally from it plus there was enough space away from the text.
 
  - This may not be obvious, but I decided I would only use desktop versions of hero images as I didn't see the necessity for using mobile versions in this particular case.
 
@@ -38,41 +38,49 @@ After I established that this issue was somehow tied to the method I used for sw
 ###### Code when the issue with logo and navbar occurred:
 
  - HTML:
+
 <picture id="hero"></picture> 
 
  - no specific CSS
 
  - Javascript:
+
 image.style = `background-image: url(${data.slides[0].image.desktop})` // on first load
 image.style = `background-image: url(${data.slides[index].image.desktop})` // switching with index
 
 ###### Code that resolved the said issue:
 
 - HTML:
-<picture id="hero" class="img0"></picture>  
+
+ <picture id="hero" class="img0"></picture>  
 
 - CSS:
+
 .img0 {
     background-image: url('images/desktop-image-hero-1.jpg');
     transition: 0.3s ease-in-out;
 }
+
 .img1 {
     background-image: url('images/desktop-image-hero-2.jpg');
     transition: 0.3s ease-in-out;
 }
+
 .img2 {
     background-image: url('images/desktop-image-hero-3.jpg');
     transition: 0.3s ease-in-out;
 }
 
 - Javascript:
+
 image.setAttribute("class", `img${index}`); // switching with index
 
-###### The marked animation section of index.scss (line 238-269) wasn't changed.
-
-
-
+###### * The marked animation section of index.scss (line 238-269) wasn't changed in any case.
+   - 
+   - 
 #### Thanks for reading !
+   - 
+   - 
 
 
 
