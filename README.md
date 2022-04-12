@@ -39,7 +39,7 @@ After I established that this issue was somehow tied to the method I used for sw
 
  - HTML:
 
-<picture id="hero"></picture> 
+< picture id="hero" > </ picture > 
 
  - no specific CSS
 
@@ -52,7 +52,7 @@ image.style = `background-image: url(${data.slides[index].image.desktop})` // sw
 
 - HTML:
 
- <picture id="hero" class="img0"></picture>  
+ < picture id="hero" class="img0" > </ picture >
 
 - CSS:
 
