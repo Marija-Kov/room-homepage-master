@@ -41,7 +41,6 @@ async function switchData(data) {
        if (index > data.slides.length - 1) {
          index = 0;
        }
-      // image.style = `background-image: url(${data.slides[index].image.desktop})`;
        image.setAttribute("class", `img${index}`);
        title.innerText = `${data.slides[index].title}`;
        description.innerText = `${data.slides[index].description}`;
