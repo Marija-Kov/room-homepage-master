@@ -21,12 +21,16 @@
     &::selection {
         background-color: rgb(245, 237, 228);
     }
-    
+}
+
+body {
+    width: 100vw;
 }
 
 //HEADER//
 
 nav {
+    z-index: 88;
     display: none;
     position: absolute;
     top: 2.5em;
@@ -75,7 +79,7 @@ li > a {
 .hamNavMenu {
     position: absolute;
     top:0;
-    z-index: 88;
+    z-index: 99;
     display: block;
     height: 13vh;
     width: 100vw;
@@ -106,6 +110,7 @@ li > a {
 }
 
 .logo {
+    z-index: 88;
     top: 2.7em;
     left: 42%;
 }
@@ -116,25 +121,24 @@ li > a {
 }
 
 #hero {
-    display: block;
-    height: 22.5em;
-    background-repeat: no-repeat;
-    background-size: cover;
+    // display: block;
+    height: 100%;
+    width: 100%;
 }
-.img0 {
-    background-image: url('images/desktop-image-hero-1.jpg');
-    transition: 0.3s ease-in-out;
-}
-.img1 {
-    background-image: url('images/desktop-image-hero-2.jpg');
-    transition: 0.3s ease-in-out;
-}
-.img2 {
-    background-image: url('images/desktop-image-hero-3.jpg');
-    transition: 0.3s ease-in-out;
-}
+// .img0 {
+//     background-image: url('images/desktop-image-hero-1.jpg');
+//     transition: 0.3s ease-in-out;
+// }
+// .img1 {
+//     background-image: url('images/desktop-image-hero-2.jpg');
+//     transition: 0.3s ease-in-out;
+// }
+// .img2 {
+//     background-image: url('images/desktop-image-hero-3.jpg');
+//     transition: 0.3s ease-in-out;
+// }
 h1 {
-    font-size: 1.8em;
+    font-size: 2em;
     font-family: spartan-medium;
     margin: 0 0 0.9em 0;
 }
@@ -146,11 +150,10 @@ max-width: 40em;
 }
 .btn-group {
     z-index: 99;
-    display: inline-block;
     position: absolute;
     display: flex;
+    top: 37.9%;
     right: 0;
-    top: 19em;
     height: 3.5em;
     width: 7em;
     background: black;
@@ -204,14 +207,14 @@ picture.about {
 background-image: url('images/image-about-dark.jpg');
 background-repeat: no-repeat;
 background-color:rgb(206, 206, 206);
-//background-size: cover;
+
 }
 .light {
 background-image: url('images/image-about-light.jpg');
 background-repeat: no-repeat;
 background-position: right;
 background-color:rgb(140, 140, 140);
-//background-size: cover; 
+
 }
 
 article.about {
@@ -238,7 +241,7 @@ h3 {
     //**EFFECTS**//
 
 article,
-picture {
+#hero {
   animation: fadeIn 1s;
 }
 
@@ -267,15 +270,6 @@ picture {
   }
 }
 
-@media (min-width: 376px){
-
-    //SECTION.TOP//
-    #hero {
-        //background-image: url('images/desktop-image-hero-1.jpg');
-        background-size: cover;
-    }
-}
-
 @media (min-width: 666px){
 
     //HEADER//
@@ -296,7 +290,7 @@ picture {
     .btn-group {
         width: 9.1em;
         height: 4.55em;
-        top: 17.97em
+        //top: 17.97em
     }
 }
 
@@ -319,23 +313,6 @@ picture {
 
 }
 
-@media (min-width: 850px) {
-
-    //SECTION.TOP//
-
-    #hero {
-        background-position-y: 30%;
-    }
-}
-
-@media (min-width: 950px) {
-
-     .btn-group {
-        top: 22.5em
-    }
-    
-}
-
 @media (min-width: 1024px) {
     //HEADER//
     header {
@@ -350,35 +327,40 @@ picture {
     .top {
         display: flex;
     }
-    #hero {
-        width: 100%;
-        height: 32em;
-        right: 40%;
+    h1 {
+        margin-top: 2.5em;
+        height: 72px;
+
     }
-    .info {
-        padding-left: 5em;
-        padding-top: 6em;
-        height: 32em;
-    }
-    .description {
-        height: 12.78em;
-        min-width: 27em;
+    button.shop,
+    .info > p.description {
+        margin: 0;
     }
     button.shop {
-        margin-top: 0;
-        margin-bottom: em;
-        top: -8em;
-        
+        margin-bottom: 9.7em;
+    }
+    h1,
+    .info > p.description,
+    button.shop {
+        margin-left: 90px;
+    }
+    .info {
+        padding: 0;
+    }
+    .description {
+        height: 9em;
+        min-width: 27em;
     }
     .btn-group {
-        position:relative;
-        left: -5em;
-        top: 5.6em;
+       position:relative;
+       top: auto;
+       bottom: 0;
     }
 
         //FOOTER//
    footer {
        display: flex;
+       width: 100vw;
    }
    article.about {
      padding: 4% 2% 2% 3%;
@@ -403,7 +385,7 @@ picture {
 }
 
 @media (min-width: 1024px) and (max-height: 700px){
-    
+    // FOOTER //
     footer,
     picture.about {
         max-height: 12em;
@@ -439,20 +421,7 @@ picture {
  
 }
 
-@media (min-width: 1250px) {
-     .btn-group {
-        top: 5.6em;
-        
-    }
-}
-
 @media (min-width: 1400px) {
-     #hero {
-         max-width: 868.02px;
-     }
-     .btn-group {
-        width: 41.5%;
-     }
      article.about {
      padding: 4% 3% 0.7% 5%;
      max-width: 627.52px;
@@ -465,10 +434,6 @@ picture {
 }
 
 @media (min-width: 1487px) {
-  .btn-group {
-         width: 9.2em;
-         bottom: 0;
-     }
   .info > p {
       min-height: 77.41px;
     } 
@@ -479,10 +444,6 @@ picture {
 }
 
 @media (min-width: 1592px) {
-    #hero {
-        max-width: 47%;
-    }
-
     footer{
         justify-content: space-around;
     }

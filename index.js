@@ -21,7 +21,9 @@ async function switchData(data) {
     let prev = document.querySelector('.prev');
     let next = document.querySelector('.next');
 
-   // image.style = `background-image: url(${data.slides[0].image.desktop})`;
+    window.innerWidth >= 425
+      ? image.setAttribute("src", `${data.slides[0].image.desktop}`)
+      : image.setAttribute("src", `${data.slides[0].image.mobile}`);
     title.innerText = `${data.slides[0].title}`;
     description.innerText = `${data.slides[0].description}`;
 
@@ -30,8 +32,9 @@ async function switchData(data) {
          if (index < 0) {
            index = data.slides.length - 1;
          }
-        // image.style = `background-image: url(${data.slides[index].image.desktop})`;
-        image.setAttribute("class", `img${index}`);
+         window.innerWidth >= 425
+           ? image.setAttribute("src", `${data.slides[index].image.desktop}`)
+           : image.setAttribute("src", `${data.slides[index].image.mobile}`);
          title.innerText = `${data.slides[index].title}`;
          description.innerText = `${data.slides[index].description}`; 
     })
@@ -41,7 +44,9 @@ async function switchData(data) {
        if (index > data.slides.length - 1) {
          index = 0;
        }
-       image.setAttribute("class", `img${index}`);
+       window.innerWidth >= 425
+         ? image.setAttribute("src", `${data.slides[index].image.desktop}`)
+         : image.setAttribute("src", `${data.slides[index].image.mobile}`);
        title.innerText = `${data.slides[index].title}`;
        description.innerText = `${data.slides[index].description}`;
     });

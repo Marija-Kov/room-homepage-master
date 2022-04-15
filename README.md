@@ -62,7 +62,7 @@ image.style = `background-image: url(${data.slides[index].image.desktop})` // sw
 
 ~~~~~~~~~~~~~~
 
-💡 Z-index of the "disappearing" elements wasn't irrelevant in this case
+💡 Z-index of the "disappearing" elements was irrelevant in this case
 
 ~~~~~~~~~~~~~~
 
