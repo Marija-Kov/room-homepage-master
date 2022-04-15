@@ -32,13 +32,20 @@ Regarding the slide button position in the desktop version, I made a decision to
 
  - This may not be obvious, but I decided I would only use desktop versions of hero images as I didn't see the necessity for using mobile versions in this particular case.
 
-#### **Previous fade-in effect issues**
+#### **Previous fade-in effect issues** 
 
 Before coming to the final solution, I tried making the hero images switch by fetching them using the JSON file that I made (I left all the code commented out in index.js) - which worked in itself, but I got this strange side-effect after implementing the fade-in animation where my logo and navbar would disappear in the beginning and reappear at the end of each animation interval despite not adding any animation specifically to those elements. This was the case in all viewport sizes. Interestingly, this wasn't the case with the hamburger menu icon.
 
 After I established that this issue was somehow tied to the method I used for switching hero images, I made the hero images switch by creating a separate class for each and making them change with javascript.
 
+
 ###### ~ Code when the issue with logo and navbar occurred:
+
+~~~~~~~~~~~~~~~~~~~
+
+💡 ATTENTION: The issue was resolved by simple addition of HIGH Z-INDEX to both nav bar and .logo elements! The reason that ham. menu icon didn't have the disappearing issue was its z-index: 88 that had been set for a different reason. I made the observation after removing the styling of the < nav >, < ul > and < li > elements entirely and realized that the only part of content that would disappear was overlapping with the < picture > element.
+
+~~~~~~~~~~~~~~~~~~~
 
  - HTML:
 
@@ -52,6 +59,12 @@ image.style = `background-image: url(${data.slides[0].image.desktop})` // on fir
 image.style = `background-image: url(${data.slides[index].image.desktop})` // switching with index
 
 ###### ~ Code that resolved the said issue:
+
+~~~~~~~~~~~~~~
+
+💡 Z-index of the "disappearing" elements wasn't irrelevant in this case
+
+~~~~~~~~~~~~~~
 
 - HTML:
 
